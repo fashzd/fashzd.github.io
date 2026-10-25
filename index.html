@@ -3,296 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Fatin is an AI integration specialist and full-stack builder focused on agentic AI, workflow automation, LLM products, RAG, voice agents, and practical business AI systems."
-    />
-    <title>Fatin | AI Integration Specialist</title>
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta name="description" content="Fatin builds agentic AI products, context-aware assistants, and reliable LLM workflows. Explore selected AI engineering projects, built in Madrid." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fatin — AI Engineering & Agentic Products" />
+    <meta property="og:description" content="Intelligence, put to work. Agentic AI products with thoughtful engineering behind every interaction." />
+    <meta property="og:url" content="https://fashzd.github.io/" />
+    <meta property="og:image" content="https://fashzd.github.io/assets/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fatin — Intelligence, put to work. AI engineering and agentic products, Madrid, Spain." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://fashzd.github.io/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="assets/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Fatin — AI Engineering & Agentic Products</title>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person","name":"Fatin","url":"https://fashzd.github.io/","sameAs":["https://github.com/fashzd"],"email":"mailto:fatinruhul@gmail.com","homeLocation":{"@type":"Place","name":"Madrid, Spain"},"knowsAbout":["Agentic AI","MCP","LLM applications","Retrieval-augmented generation","Workflow automation"]}
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="#top" aria-label="StarBound-Systems portfolio home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>StarBound-Systems</span>
-        </a>
-        <div class="nav-links">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#credentials">Credentials</a>
-          <a href="#contact">Contact</a>
+      <nav class="nav wrap" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Fatin — home">fatin<span class="brand-dot">.</span><span class="brand-caption">AI ENGINEERING<br />& AGENTIC PRODUCTS</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" hidden><span>Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
+        <div class="nav-links" id="nav-links">
+          <a href="#projects" data-nav>Work <span>03</span></a>
+          <a href="#skills" data-nav>Capabilities</a>
+          <a href="#about" data-nav>About</a>
+          <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero section-grid" aria-labelledby="hero-title">
+    <main id="main-content">
+      <section class="hero wrap" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">AI Integration Specialist · Madrid, Spain</p>
-          <h1 id="hero-title">I build practical agentic AI products for real business workflows.</h1>
-          <p class="hero-text">
-            I am Fatin, an IT professional with 5+ years across technical management, development,
-            testing, and AI delivery. My current focus is building reliable AI systems with LLMs,
-            MCP, Codex, Claude Code, RAG, automation, voice agents, and human-in-the-loop workflows.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="#projects">View Projects</a>
-            <a class="button button-secondary" href="#contact">Contact Me</a>
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> INDEPENDENT BUILDER · MADRID, SPAIN</p>
+          <h1 id="hero-title">Intelligence,<br /><em>put to work.</em></h1>
+          <p class="hero-description">I’m Fatin. I build agentic AI products that connect models, tools, and real workflows. Thoughtful engineering, from the first prompt to the final interaction.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="https://github.com/fashzd" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a>
           </div>
+          <div class="hero-note"><span class="little-star" aria-hidden="true">✳</span><p>Built for real people.<br /><strong>Designed to keep them in control.</strong></p></div>
         </div>
 
-        <div class="command-panel" aria-label="Profile highlights">
-          <div class="panel-header">
-            <span class="status-light" aria-hidden="true"></span>
-            <span>Systems Terminal</span>
+        <div class="system-panel" data-stage="context" aria-label="Interactive agent architecture illustration">
+          <div class="system-header"><span><span class="tiny-square" aria-hidden="true"></span> ANATOMY OF AN AGENT</span><span class="system-version">SYSTEM SKETCH / 01</span></div>
+          <div class="system-graph">
+            <svg class="agent-graph" viewBox="0 0 480 340" role="img" aria-labelledby="graph-title graph-desc">
+              <title id="graph-title">A connected, human-guided AI agent</title>
+              <desc id="graph-desc">Intent connects to an AI agent, which uses context, memory and MCP tools before returning an action for human review.</desc>
+              <defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#cbcec3" /></pattern></defs>
+              <rect width="480" height="340" fill="url(#dots)" />
+              <circle class="orbit orbit-outer" cx="240" cy="168" r="126" />
+              <circle class="orbit orbit-inner" cx="240" cy="168" r="87" />
+              <path class="connector" d="M240 71V114 M111 168H186 M294 168H369 M240 222V270" />
+              <path class="flow-dot" d="M240 71V114 M111 168H186 M294 168H369 M240 222V270" />
+              <g class="graph-node node-intent"><rect x="173" y="24" width="134" height="47" rx="10" /><circle cx="195" cy="47" r="4" /><text x="209" y="52">Your intent</text></g>
+              <g class="graph-node node-memory"><rect x="17" y="144" width="111" height="48" rx="10" /><path d="M35 160h12v15H35z M38 164h6 M38 168h6" /><text x="57" y="173">Memory</text></g>
+              <g class="graph-node node-tools"><rect x="352" y="144" width="111" height="48" rx="10" /><path d="m375 161-7 7 7 7m13-14 7 7-7 7m-3-16-4 18" /><text x="402" y="172">MCP</text></g>
+              <g class="agent-core"><rect x="186" y="114" width="108" height="108" rx="27" /><path class="core-star" d="M240 131c3 20 9 26 29 29-20 3-26 9-29 29-3-20-9-26-29-29 20-3 26-9 29-29Z" /><text x="240" y="207" text-anchor="middle">AI AGENT</text></g>
+              <g class="graph-node node-review"><rect x="159" y="270" width="162" height="47" rx="10" /><path d="m177 293 4 4 8-9" /><text x="199" y="298">Human review</text></g>
+              <text class="graph-label" x="315" y="71">CONTEXT IN.</text><text class="graph-label" x="315" y="84">USEFUL ACTION OUT.</text>
+              <circle class="orbit-point" cx="139" cy="93" r="4" /><circle class="orbit-point" cx="340" cy="244" r="4" />
+            </svg>
           </div>
-          <div class="terminal-line" aria-label="Startup command">
-            <span class="prompt">$</span>
-            <span class="typed-command">./launch StarBound-Systems</span>
+          <div class="system-controls" aria-label="Explore the agent workflow" hidden>
+            <button type="button" data-stage-button="context" aria-pressed="true"><span>01</span> Context</button>
+            <button type="button" data-stage-button="reason" aria-pressed="false"><span>02</span> Reason</button>
+            <button type="button" data-stage-button="action" aria-pressed="false"><span>03</span> Action</button>
           </div>
-          <dl class="signal-list">
-            <div>
-              <dt>Experience</dt>
-              <dd>5+ years in IT, 2+ years building AI solutions for private clients</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Agentic AI, LLM apps, workflow automation, RAG, voice agents</dd>
-            </div>
-            <div>
-              <dt>Tools</dt>
-              <dd>OpenAI, Claude Code, Codex, MCP, n8n, Telegram bots, ElevenLabs</dd>
-            </div>
-            <div>
-              <dt>Languages</dt>
-              <dd>English, Bengali, Russian, Spanish</dd>
-            </div>
-          </dl>
+          <p class="system-description" aria-live="polite" data-stage-description><span class="description-marker" aria-hidden="true">↳</span> Ground every response in the right files, memory, and knowledge.</p>
+          <span class="system-footnote">A simplified view of the systems I build. Select a step to explore.</span>
         </div>
+
+        <div class="hero-bottom"><span>LESS FRICTION. MORE POSSIBILITY.</span><a href="#projects">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
       </section>
 
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="eyebrow">Mission Logs</p>
-          <h2 id="projects-title">Selected AI Projects</h2>
+      <div class="proof-strip wrap" aria-label="Experience at a glance">
+        <div><strong>5<span>+</span></strong><p>Years across software,<br />QA & technical delivery</p></div>
+        <div><strong>2<span>+</span></strong><p>Years building AI solutions<br />for private clients</p></div>
+        <div><span class="proof-symbol" aria-hidden="true">↗</span><p>Software engineering foundation.<br /><strong>Business-minded execution.</strong></p></div>
+      </div>
+
+      <section class="work-section wrap" id="projects" aria-labelledby="projects-title">
+        <div class="section-topline"><p class="eyebrow">01 / SELECTED WORK</p><span class="section-aside">IDEAS, MADE OPERATIONAL.</span></div>
+        <div class="work-heading"><h2 id="projects-title">Useful by design.<br /><em>Intelligent by nature.</em></h2><p>From context-aware desktop assistants to review-first copilots. A few things I’ve built, end to end.</p></div>
+        <div class="work-toolbar"><div class="project-filters" aria-label="Filter projects" hidden><button type="button" data-filter="all" aria-pressed="true">All work <span>03</span></button><button type="button" data-filter="agents" aria-pressed="false">Agentic apps</button><button type="button" data-filter="workflows" aria-pressed="false">AI workflows</button></div><p class="project-count" aria-live="polite">3 selected projects</p></div>
+
+        <div class="project-grid">
+          <article class="project-card project-featured" data-category="agents" id="project-bb8">
+            <div class="featured-copy"><div class="project-meta"><span>01 / DESKTOP AI ASSISTANT</span><span class="project-dot" aria-hidden="true"></span></div><h3>Meet BB-8.</h3><p class="project-subtitle">An assistant with context.<br />And a little more capability.</p><p class="project-description">A desktop AI companion that brings together conversation, persistent memory, local files, and Notion. Connected tools, with human approval built in.</p><ul class="tags" aria-label="BB-8 technologies"><li>Electron</li><li>React</li><li>OpenAI</li><li>MCP</li></ul><div class="project-actions"><button class="button button-dark" type="button" data-open-project="bb8" hidden>Inside the build <span aria-hidden="true">↗</span></button><a class="repo-link" href="https://github.com/fashzd/BB-8-Agentic-APP" target="_blank" rel="noopener noreferrer" aria-label="BB-8 source code on GitHub">Source code <span aria-hidden="true">↗</span></a></div></div>
+            <a class="featured-visual screenshot-opener" data-open-project="bb8" aria-label="Explore BB-8 screenshots and case study" href="assets/projects/bb8/bb8-chat.png"><span class="visual-label">CONTEXT IS EVERYTHING.</span><span class="visual-orbit visual-orbit-one" aria-hidden="true"></span><span class="visual-orbit visual-orbit-two" aria-hidden="true"></span><img src="assets/projects/bb8/bb8-chat.png" alt="The BB-8 desktop assistant showing its chat and knowledge sources" width="1262" height="1436" loading="lazy" /><span class="visual-badge"><span class="status-dot" aria-hidden="true"></span> MEMORY. TOOLS. HUMAN CONTROL.</span><span class="expand-icon" aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card" data-category="workflows" id="project-triage">
+            <a class="project-visual visual-triage screenshot-opener" data-open-project="triage" aria-label="Explore Triage Copilot screenshots and case study" href="assets/projects/triage-copilot/coordinator-inbox.png"><span class="visual-label">CLARITY, BEFORE ACTION.</span><img src="assets/projects/triage-copilot/coordinator-inbox.png" alt="Triage Copilot coordinator inbox with maintenance tickets and human review controls" width="2710" height="1582" loading="lazy" /><span class="expand-icon" aria-hidden="true">↗</span></a>
+            <div class="project-body"><p class="project-meta">02 / B2B AI WORKFLOW</p><h3>Triage Copilot</h3><p class="project-description">Turning messy maintenance messages into structured, reviewable decisions for property managers. Safety rules first. A human in the loop.</p><ul class="tags" aria-label="Triage Copilot capabilities"><li>OpenAI</li><li>Safety rules</li><li>Human review</li></ul><div class="project-actions"><button class="text-link" type="button" data-open-project="triage" hidden>Explore the build <span aria-hidden="true">↗</span></button><a class="repo-link" href="https://github.com/fashzd/Tirage_Copilot_LMM_Property-Manager-DEMO-" target="_blank" rel="noopener noreferrer" aria-label="Triage Copilot source code on GitHub">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+
+          <article class="project-card" data-category="workflows" id="project-support">
+            <a class="project-visual visual-support screenshot-opener" data-open-project="support" aria-label="Explore Support Copilot screenshots and case study" href="assets/projects/customer-support-copilot/operations-console.png"><span class="visual-label">BETTER SUPPORT, TOGETHER.</span><img src="assets/projects/customer-support-copilot/operations-console.png" alt="Customer Support Copilot operations console with ticket analysis and review tools" width="2710" height="1582" loading="lazy" /><span class="expand-icon" aria-hidden="true">↗</span></a>
+            <div class="project-body"><p class="project-meta">03 / INTERNAL AI APPLICATION</p><h3>Support Copilot</h3><p class="project-description">A second pair of eyes for ecommerce support. Classify tickets, draft safer replies, and flag escalations, with a traceable review history.</p><ul class="tags" aria-label="Support Copilot technologies"><li>Node.js</li><li>SQLite</li><li>JSON Schema</li></ul><div class="project-actions"><button class="text-link" type="button" data-open-project="support" hidden>Explore the build <span aria-hidden="true">↗</span></button><a class="repo-link" href="https://github.com/fashzd/LLM_APP_Customer_Support_COPILOT" target="_blank" rel="noopener noreferrer" aria-label="Support Copilot source code on GitHub">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </article>
         </div>
-
-        <article class="project-showcase" data-project>
-          <div class="project-copy">
-            <p class="project-kicker">Desktop AI assistant</p>
-            <h3>BB-8</h3>
-            <p>
-              A desktop AI assistant built with Electron, React, and Node.js. BB-8 combines
-              conversational AI with persistent memory, local file context, secure OpenAI
-              integration, Notion MCP connectivity, and approval-based desktop workflows.
-            </p>
-            <ul class="feature-list">
-              <li>Electron and React desktop app architecture</li>
-              <li>Secure API key and local settings handling</li>
-              <li>Source-aware AI with files, memory, and Notion MCP</li>
-              <li>UX-first iteration, testing, and macOS packaging</li>
-            </ul>
-            <a class="button button-secondary" href="https://github.com/fashzd/BB-8-Agentic-APP" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-          <div class="project-media">
-            <img
-              class="project-image"
-              src="assets/projects/bb8/bb8-chat.png"
-              alt="BB-8 desktop assistant chat and knowledge source interface"
-              data-main-image
-            />
-            <div class="thumb-row" aria-label="BB-8 screenshots">
-              <button class="thumb is-active" type="button" data-image="assets/projects/bb8/bb8-chat.png">Chat</button>
-              <button class="thumb" type="button" data-image="assets/projects/bb8/bb8-workspace-files.png">Files</button>
-              <button class="thumb" type="button" data-image="assets/projects/bb8/bb8-notion-search.png">Notion</button>
-              <button class="thumb" type="button" data-image="assets/projects/bb8/bb8-ai-settings.png">AI</button>
-              <button class="thumb" type="button" data-image="assets/projects/bb8/bb8-memory.png">Memory</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-showcase" data-project>
-          <div class="project-copy">
-            <p class="project-kicker">B2B AI workflow tool</p>
-            <h3>Triage Copilot for Property Managers</h3>
-            <p>
-              A review-first maintenance triage system for U.S. residential property management
-              teams. It converts messy tenant messages into structured urgency, category, trade,
-              missing information, resident reply, and dispatch outputs.
-            </p>
-            <ul class="feature-list">
-              <li>Emergency detection and deterministic safety rules</li>
-              <li>OpenAI-backed model integration with fallback behavior</li>
-              <li>Persistent ticket, review, queue, and audit storage</li>
-              <li>Human review workspace for approval and rejection flows</li>
-            </ul>
-            <a class="button button-secondary" href="https://github.com/fashzd/Tirage_Copilot_LMM_Property-Manager-DEMO-" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-          <div class="project-media">
-            <img
-              class="project-image"
-              src="assets/projects/triage-copilot/coordinator-inbox.png"
-              alt="Maintenance Triage Copilot coordinator inbox"
-              data-main-image
-            />
-            <div class="thumb-row" aria-label="Triage Copilot screenshots">
-              <button class="thumb is-active" type="button" data-image="assets/projects/triage-copilot/coordinator-inbox.png">Inbox</button>
-              <button class="thumb" type="button" data-image="assets/projects/triage-copilot/work-queue.png">Queue</button>
-              <button class="thumb" type="button" data-image="assets/projects/triage-copilot/review-workspace.png">Review</button>
-              <button class="thumb" type="button" data-image="assets/projects/triage-copilot/review-detail.png">Detail</button>
-              <button class="thumb" type="button" data-image="assets/projects/triage-copilot/pending-review.png">Pending</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-showcase" data-project>
-          <div class="project-copy">
-            <p class="project-kicker">Internal AI support app</p>
-            <h3>Customer Support Copilot for Operators</h3>
-            <p>
-              A full-stack ecommerce support copilot for human agents. It classifies inbound
-              tickets, drafts safe replies, highlights missing information, recommends escalation,
-              and stores review history for operational traceability.
-            </p>
-            <ul class="feature-list">
-              <li>Structured JSON output contracts and backend validation</li>
-              <li>Fallback handling for invalid model output</li>
-              <li>SQLite persistence, review history, and review actions</li>
-              <li>Sample-ticket QA flows with automated and manual testing</li>
-            </ul>
-            <a class="button button-secondary" href="https://github.com/fashzd/LLM_APP_Customer_Support_COPILOT" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-          <div class="project-media">
-            <img
-              class="project-image"
-              src="assets/projects/customer-support-copilot/operations-console.png"
-              alt="Customer Support Copilot operations console"
-              data-main-image
-            />
-            <div class="thumb-row" aria-label="Customer Support Copilot screenshots">
-              <button class="thumb is-active" type="button" data-image="assets/projects/customer-support-copilot/operations-console.png">Console</button>
-              <button class="thumb" type="button" data-image="assets/projects/customer-support-copilot/sample-picker.png">Samples</button>
-              <button class="thumb" type="button" data-image="assets/projects/customer-support-copilot/analysis-output.png">Output</button>
-              <button class="thumb" type="button" data-image="assets/projects/customer-support-copilot/review-history.png">History</button>
-              <button class="thumb" type="button" data-image="assets/projects/customer-support-copilot/review-action-saved.png">Review</button>
-            </div>
-          </div>
-        </article>
+        <a class="all-repos-link" href="https://github.com/fashzd?tab=repositories" target="_blank" rel="noopener noreferrer">More experiments live on GitHub <span aria-hidden="true">↗</span></a>
       </section>
 
-      <section class="section about-grid" id="about" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2 id="about-title">AI builder with a management and delivery background</h2>
-        </div>
-        <div class="about-copy">
-          <p>
-            I am an AI integration specialist based in Madrid, Spain. I bring more than five years
-            of IT experience across technical management, software development, testing, client
-            delivery, and business process analysis. My Bachelor&apos;s degree in Software Engineering
-            created the technical foundation for my full-stack journey, from writing production
-            code and testing systems to understanding how frontend, backend, data, and integrations
-            fit together. My MBA in General Management adds the business layer: connecting technical
-            systems to operational value, stakeholder needs, and practical delivery plans.
-          </p>
-          <p>
-            My current focus is building agentic AI products and workflow automations that move
-            beyond prototypes. I work with Codex, Claude Code, MCP, LLM APIs, RAG systems, Telegram
-            agents, n8n integrations, custom scripts, private LLM fine-tuning workflows, and
-            ElevenLabs voice agent integrations. I care about structured outputs, validation,
-            memory, tool use, approval flows, and making AI systems usable for real operators.
-          </p>
-        </div>
+      <section class="capabilities-section" id="skills" aria-labelledby="skills-title">
+        <div class="wrap"><div class="section-topline"><p class="eyebrow">02 / THE TOOLKIT</p><span class="section-aside">FROM SYSTEM DESIGN TO DELIVERY.</span></div><div class="capabilities-grid"><div class="capabilities-intro"><h2 id="skills-title">Good AI needs<br /><em>good engineering.</em></h2><p>I connect the pieces that turn a model into a useful product: context, tools, validation, and an interface people can trust.</p><div class="capability-mark" aria-hidden="true">✳</div></div><div class="capability-list">
+          <details open><summary><span class="cap-number">01</span><span>Agentic systems<span class="cap-summary">MCP · tool use · persistent memory</span></span><span class="detail-toggle" aria-hidden="true"></span></summary><p>Context-aware assistants that connect to tools and knowledge, carry useful memory, and ask for approval before taking action.</p></details>
+          <details><summary><span class="cap-number">02</span><span>Reliable LLM applications<span class="cap-summary">Structured outputs · validation · fallbacks</span></span><span class="detail-toggle" aria-hidden="true"></span></summary><p>Clear output contracts, backend validation, deterministic rules, and traceable fallbacks. Reliability is part of the product design.</p></details>
+          <details><summary><span class="cap-number">03</span><span>Knowledge & automation<span class="cap-summary">RAG · n8n · APIs · voice agents</span></span><span class="detail-toggle" aria-hidden="true"></span></summary><p>Retrieval grounded in business knowledge, connected workflows, Telegram agents, and ElevenLabs voice integrations that fit how teams already work.</p></details>
+          <details><summary><span class="cap-number">04</span><span>Full-stack delivery<span class="cap-summary">Python · JavaScript · React · Node.js</span></span><span class="detail-toggle" aria-hidden="true"></span></summary><p>Frontend, backend, data, and integrations, brought together through iterative implementation, testing, QA, and practical technical delivery.</p></details>
+        </div></div><div class="tool-strip"><span>IN MY WORKBENCH</span><ul aria-label="Selected tools"><li>OpenAI</li><li>Claude Code</li><li>Codex</li><li>MCP</li><li>n8n</li><li>ElevenLabs</li></ul></div></div>
       </section>
 
-      <section class="section" id="skills" aria-labelledby="skills-title">
-        <div class="section-heading">
-          <p class="eyebrow">Capabilities</p>
-          <h2 id="skills-title">AI-focused skill stack</h2>
-        </div>
-        <div class="skills-grid">
-          <section class="skill-band">
-            <h3>AI Product Engineering</h3>
-            <p>LLM app design, structured output contracts, prompt systems, safety rules, fallback behavior, audit trails, and human-in-the-loop workflows.</p>
-          </section>
-          <section class="skill-band">
-            <h3>Agentic AI and MCP</h3>
-            <p>Tool-based workflows, MCP-connected assistants, source-aware agents, local context, approval-based actions, and operational agent design.</p>
-          </section>
-          <section class="skill-band">
-            <h3>Automation and Integrations</h3>
-            <p>Telegram AI sales agents, n8n workflows, custom scripts, business process automation, CRM-style flows, and API integrations.</p>
-          </section>
-          <section class="skill-band">
-            <h3>RAG and Knowledge Systems</h3>
-            <p>Knowledge-base adaptation, retrieval-augmented workflows, source grounding, internal documentation assistants, and sales enablement agents.</p>
-          </section>
-          <section class="skill-band">
-            <h3>Voice and Conversational AI</h3>
-            <p>ElevenLabs integrations, voice agent workflows, custom model integration, conversational UX, and multi-step assistant behavior.</p>
-          </section>
-          <section class="skill-band">
-            <h3>Engineering and Delivery</h3>
-            <p>Python, JavaScript, SQL, Node.js, testing, backend validation, SQLite, Agile project management, QA, and technical client delivery.</p>
-          </section>
-        </div>
+      <section class="about-section wrap" id="about" aria-labelledby="about-title">
+        <div class="section-topline"><p class="eyebrow">03 / THE PERSON BEHIND THE PRODUCTS</p><span class="section-aside">CURIOUS BY DEFAULT.</span></div><div class="about-grid"><div class="about-heading"><h2 id="about-title">Engineer’s mindset.<br /><em>Delivery perspective.</em></h2><div class="name-card"><span class="name-card-label">HELLO, I’M</span><span class="signature">Fatin<span>.</span></span><span class="name-card-footer"><span class="status-dot" aria-hidden="true"></span> MADRID, SPAIN <span aria-hidden="true">↗</span></span></div></div><div class="about-copy"><p class="about-lead">I like the point where an interesting technology becomes something someone actually uses.</p><p>My background spans more than five years in IT, from software development and testing to technical management and client delivery. Over the last two-plus years, I’ve focused on building AI solutions for private clients.</p><p>A foundation in software engineering helps me connect frontend, backend, data, and integrations. An MBA helps me connect those systems to the people and business processes they serve.</p><div class="education" id="credentials"><div><span class="small-label">TECHNICAL FOUNDATION</span><strong>Bachelor’s in<br />Software Engineering</strong></div><div><span class="small-label">BUSINESS PERSPECTIVE</span><strong>MBA in<br />General Management</strong></div></div><div class="languages"><span class="small-label">ALSO CONNECTING IN</span><p>English <span>·</span> Bengali <span>·</span> Russian <span>·</span> Spanish</p></div></div></div>
       </section>
 
-      <section class="section credential-grid" id="credentials" aria-labelledby="credentials-title">
-        <div class="section-heading">
-          <p class="eyebrow">Credentials</p>
-          <h2 id="credentials-title">Certificates and profile links</h2>
-        </div>
-        <div class="credential-copy">
-          <p>
-            Yes, you should add deep learning certificates, AI certificates, automation credentials,
-            and your LinkedIn profile. They help recruiters and clients verify your learning path
-            while the projects prove you can build.
-          </p>
-          <div class="credential-actions">
-            <a class="button button-secondary" href="#" aria-label="LinkedIn profile placeholder">LinkedIn Profile</a>
-            <a class="button button-secondary" href="#" aria-label="Certificates placeholder">Certificates</a>
-          </div>
-        </div>
-        <ul class="credential-list">
-          <li>Deep Learning and neural networks</li>
-          <li>LLM application development</li>
-          <li>AI automation and workflow integration</li>
-          <li>Cloud, backend, or data certificates</li>
-          <li>Bachelor&apos;s degree in Software Engineering</li>
-          <li>MBA in General Management</li>
-        </ul>
-      </section>
-
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <p class="eyebrow">Open Channel</p>
-        <h2 id="contact-title">Let’s build AI that operators can actually use.</h2>
-        <p>
-          Available for AI integrations, agentic workflow prototypes, LLM product MVPs, RAG systems,
-          automation, and voice agent builds.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="mailto:fatinruhul@gmail.com">Email Me</a>
-          <a class="button button-secondary" href="https://github.com/fashzd" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </section>
+      <section class="contact-section wrap" id="contact" aria-labelledby="contact-title"><div class="contact-panel"><div class="contact-topline"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> OPEN TO COLLABORATION</p><span aria-hidden="true">↗</span></div><div class="contact-grid"><h2 id="contact-title">Let’s build<br /><em>what’s next.</em></h2><div class="contact-copy"><p>An AI product, a workflow worth improving, or a team building something meaningful. I’d love to hear about it.</p><a class="button button-dark" href="mailto:fatinruhul@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:fatinruhul@gmail.com">fatinruhul@gmail.com</a><button type="button" class="copy-email" aria-label="Copy email address" hidden><svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" /><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" /></svg></button><span class="copy-status" role="status"></span></div></div></div></div></section>
     </main>
 
-    <footer class="footer">
-      <p>Fatin · AI Integration Specialist · Madrid, Spain</p>
-    </footer>
+    <footer class="footer wrap"><a class="footer-brand" href="#top">fatin<span>.</span><span class="footer-byline"> / StarBound-Systems</span></a><p>© <span data-year>2026</span> Fatin. Built with intent.</p><div><a href="https://github.com/fashzd" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
 
-    <a
-      class="star-mail"
-      href="mailto:fatinruhul@gmail.com?subject=Star%20Ship%20Voyage%20Mission&body=Dear%20Fatiin%2C%0D%0A%0D%0AI%20want%20to%20hire%20you%20and%20buy%20a%20ticket%20to%20your%20Star%20Ship%20for%20a%20voyage%20mission%20for%20maximum%20business%20automation%20and%20send%20my%20business%20to%20the%20mooooooooooon"
-      aria-label="Send Fatin a Star Ship hiring email"
-      title="Launch hiring message"
-    >
-      <span aria-hidden="true"></span>
-    </a>
-
-    <script src="script.js"></script>
+    <dialog class="project-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-header"><span class="small-label">INSIDE THE BUILD</span><button type="button" class="dialog-close" aria-label="Close project details">Close <span aria-hidden="true">×</span></button></div><div class="dialog-content"><p class="eyebrow" data-dialog-kicker></p><h2 id="dialog-title"></h2><p class="dialog-intro" data-dialog-intro></p><div class="dialog-case-study" data-dialog-case-study></div><div class="dialog-gallery"><div class="gallery-heading"><h3>Product walkthrough</h3><span class="small-label">ACTUAL PROJECT SCREENSHOTS</span></div><div class="gallery-tabs" aria-label="Choose a project screenshot"></div><figure><div class="gallery-image-wrap"><img data-dialog-image src="assets/projects/bb8/bb8-chat.png" alt="" width="1262" height="1436" /></div><figcaption data-dialog-caption></figcaption></figure></div><a class="button button-dark" data-dialog-repo href="https://github.com/fashzd" target="_blank" rel="noopener noreferrer">Explore the source <span aria-hidden="true">↗</span></a></div></div></dialog>
   </body>
 </html>
