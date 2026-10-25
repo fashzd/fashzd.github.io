@@ -14,16 +14,9 @@
   line-height: 1.9;
   color: var(--muted);
 }
-.hackathon-stats { display: flex; flex-wrap: wrap; gap: 33px; margin-top: 22px; }
-.hackathon-stats > span {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  font: 8px/1.5 var(--mono);
-  letter-spacing: .5px;
-  color: var(--muted);
-}
-.hackathon-stats strong { font: 31px/1 var(--sans); letter-spacing: -1px; color: var(--ink); }
+
+
+
 .hackathon-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 32px; }
 .hackathon-highlight { display: block; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fbfcf7; }
 .hackathon-highlight > img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-bottom: 1px solid var(--line); }
@@ -115,7 +108,7 @@
   .archive-description { font-size: 14px; }
   .hackathon-highlight > div { padding: 18px; }
   .hackathon-highlight h3 { font-size: 19px; }
-  .hackathon-stats { gap: 22px; }
+
   .certificate-stack { height: 355px; }
   .certificate-stack > img { width: 154px; }
   .stack-back { left: calc(50% - 125px); }
@@ -135,8 +128,8 @@
   .hackathon-highlight h3 { font-size: 16px; }
   .hackathon-highlight .small-label { font-size: 6px; }
   .hackathon-highlight p { font-size: 10px; }
-  .hackathon-stats > span { font-size: 6px; gap: 8px; }
-  .hackathon-stats strong { font-size: 27px; }
+
+
   .archive-hero h1 { font-size: 62px; letter-spacing: -3.8px; }
   .archive-hero-copy > .eyebrow { font-size: 7px; }
   .archive-description { font-size: 12px; }
@@ -182,8 +175,8 @@
   .source-profile { font-size: 7px; }
   .hackathon-intro { grid-template-columns: 1fr; gap: 20px; }
   .hackathon-intro > div > p { font-size: 13px; }
-  .hackathon-stats { gap: 30px; margin-top: 20px; }
-  .hackathon-stats > span { font-size: 8px; gap: 10px; }
+
+
   .hackathon-highlights { grid-template-columns: 1fr; gap: 16px; margin-top: 27px; }
   .hackathon-highlight { display: grid; grid-template-columns: 105px 1fr; align-items: stretch; }
   .hackathon-highlight > img { height: 100%; min-height: 117px; object-fit: cover; border-bottom: 0; border-right: 1px solid var(--line); }
@@ -257,7 +250,7 @@
   .hackathon-highlight { grid-template-columns: 85px 1fr; }
   .hackathon-highlight > div { padding: 14px; }
   .hackathon-highlight h3 { font-size: 17px; }
-  .hackathon-stats { gap: 24px; }
+
   .archive-hero h1 { font-size: 56px; }
   .archive-hero .hero-actions { gap: 16px; }
   .archive-hero .button { font-size: 10px; gap: 15px; padding-inline: 14px; }
@@ -274,4 +267,50 @@
   .certificate-thumbnail { height: 180px; padding: 13px; }
   .certificate-body h3 { font-size: 14px; }
   .certificate-body { padding: 14px 11px; }
+}
+
+/* Course credentials use a concise list of issuer records. */
+.courses-section { padding-bottom: 90px; }
+.courses-heading { display: grid; grid-template-columns: 1fr 1.04fr; align-items: end; gap: 90px; margin-bottom: 33px; }
+.courses-heading > p { font-size: 14px; line-height: 1.9; color: var(--muted); max-width: 430px; padding-bottom: 5px; }
+.course-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.course-card { display: flex; flex-direction: column; min-width: 0; padding: 27px 30px 23px; background: #fbfcf7; border: 1px solid var(--line); border-radius: 8px; }
+.course-provider { display: flex; align-items: center; gap: 12px; font: 8px/1.7 var(--mono); color: var(--muted); letter-spacing: .7px; }
+.course-provider-mark { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 34px; flex-shrink: 0; border: 1px solid #cbd3c1; border-radius: 4px; background: #edf0e6; color: var(--ink); font: 600 10px/1 var(--sans); letter-spacing: -.2px; }
+.course-provider-dlai { background: #e3edda; color: #526b3e; font-family: var(--mono); font-weight: 400; }
+.course-card h3 { font-size: 26px; line-height: 1.3; letter-spacing: -.7px; margin-top: 23px; max-width: 460px; }
+.course-record-type { font-size: 11px; color: var(--muted); line-height: 1.8; margin-top: 15px; margin-bottom: 22px; }
+.course-record-type > span { margin-inline: 5px; }
+.course-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding-top: 17px; border-top: 1px solid var(--line); margin-top: auto; }
+.course-actions .text-link { border: 0; font-size: 11px; }
+.course-actions .repo-link { font-size: 10px; }
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .nav .brand-caption { display: none; }
+  .nav-links { gap: 17px; }
+  .nav-links .nav-contact { margin-left: 0; gap: 12px; }
+}
+@media (max-width: 920px) {
+  .courses-section { padding-bottom: 70px; }
+  .courses-heading { gap: 38px; }
+  .courses-heading > p { font-size: 12px; }
+  .course-grid { gap: 20px; }
+  .course-card { padding: 24px; }
+  .course-card h3 { font-size: 23px; }
+  .course-provider { font-size: 7px; letter-spacing: .5px; }
+}
+@media (max-width: 700px) {
+  .nav-links .nav-contact { grid-column: auto; margin-top: 0; }
+  .courses-section { padding-bottom: 58px; }
+  .courses-section .section-topline { flex-wrap: wrap; gap: 12px; }
+  .courses-section .section-aside { font-size: 7px; letter-spacing: .4px; }
+  .courses-heading { grid-template-columns: 1fr; gap: 20px; margin-bottom: 25px; }
+  .courses-heading > p { font-size: 13px; padding-bottom: 0; }
+  .course-grid { grid-template-columns: 1fr; gap: 18px; }
+  .course-card { padding: 24px; }
+  .course-provider { font-size: 8px; }
+  .course-card h3 { font-size: 24px; margin-top: 20px; }
+  .course-record-type { font-size: 10px; margin-top: 14px; }
+  .course-actions { padding-top: 14px; }
+  .course-actions a { min-height: 36px; }
 }

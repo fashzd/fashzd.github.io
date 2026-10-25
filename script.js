@@ -244,7 +244,7 @@ if (copyButton && window.isSecureContext && navigator.clipboard?.writeText) {
 
 document.querySelector("[data-year]").textContent = String(new Date().getFullYear());
 if ("IntersectionObserver" in window) {
-  const sections = document.querySelectorAll("#top, #projects, #hackathons, #skills, #about, #contact");
+  const sections = document.querySelectorAll("#top, #projects, #hackathons, #skills, #about, #certifications, #contact");
   let observer;
   function observeSections() {
     observer?.disconnect();
