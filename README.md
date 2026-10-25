@@ -15,12 +15,18 @@ Then open http://127.0.0.1:4173. The core portfolio also works without JavaScrip
 ## Content
 
 - `index.html`: page structure, project summaries, background, contact details, and SEO metadata.
+- `hackathons.html`: six public lablab.ai submissions and their completion certificates, with original project and certificate verification links.
 - `styles.css`: responsive design, locally hosted typography, and reduced-motion support.
+- `hackathons.css`: homepage hackathon highlights, the build log, and responsive certificate galleries.
 - `script.js`: interactions and the detailed case study content in `projectDetails`.
 - `assets/projects/`: original project screenshots.
+- `assets/hackathons/`: optimized original submission covers from the public lablab.ai profile.
+- `assets/certificates/`: unmodified original certificate PNGs and lightweight WebP previews. Originals load when opened or downloaded.
 - `project-notes.md`: source material for the experience and project descriptions.
 
 Update both project summaries in `index.html` and case studies in `script.js` when changing project details. Add real profile or certificate links only when available. The portfolio makes no calls to AI services and collects no visitor data.
+
+The hackathon records come from [Fatin's lablab.ai profile](https://lablab.ai/u/@faz3d). All six are **certificates of completion**. The displayed issue dates come from the public certificate records and differ from the hackathon event dates. Each project links to its matching certificate, and each certificate links back to the issuer's public record.
 
 ## GitHub Pages
 

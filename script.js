@@ -30,27 +30,29 @@ document.addEventListener("click", (event) => {
 window.matchMedia("(min-width: 701px)").addEventListener("change", closeMenu);
 
 const systemPanel = document.querySelector(".system-panel");
-const stageDescriptions = {
-  context: "Ground every response in the right files, memory, and knowledge.",
-  reason: "Connect the model to the right tools, with clear output contracts.",
-  action: "Keep people in control. Review and approve before taking action.",
-};
-document.querySelector(".system-controls").hidden = false;
-document.querySelectorAll("[data-stage-button]").forEach((button) => {
-  button.addEventListener("click", () => {
-    systemPanel.dataset.stage = button.dataset.stageButton;
-    document.querySelectorAll("[data-stage-button]").forEach((item) => {
-      item.setAttribute("aria-pressed", String(item === button));
+if (systemPanel) {
+  const stageDescriptions = {
+    context: "Ground every response in the right files, memory, and knowledge.",
+    reason: "Connect the model to the right tools, with clear output contracts.",
+    action: "Keep people in control. Review and approve before taking action.",
+  };
+  document.querySelector(".system-controls").hidden = false;
+  document.querySelectorAll("[data-stage-button]").forEach((button) => {
+    button.addEventListener("click", () => {
+      systemPanel.dataset.stage = button.dataset.stageButton;
+      document.querySelectorAll("[data-stage-button]").forEach((item) => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      const marker = document.createElement("span");
+      marker.className = "description-marker";
+      marker.setAttribute("aria-hidden", "true");
+      marker.textContent = "↳";
+      document.querySelector("[data-stage-description]").replaceChildren(marker, document.createTextNode(stageDescriptions[button.dataset.stageButton]));
     });
-    const marker = document.createElement("span");
-    marker.className = "description-marker";
-    marker.setAttribute("aria-hidden", "true");
-    marker.textContent = "↳";
-    document.querySelector("[data-stage-description]").replaceChildren(marker, document.createTextNode(stageDescriptions[button.dataset.stageButton]));
   });
-});
+}
 
-document.querySelector(".project-filters").hidden = false;
+document.querySelector(".project-filters")?.removeAttribute("hidden");
 document.querySelectorAll("[data-filter]").forEach((button) => {
   button.addEventListener("click", () => {
     let count = 0;
@@ -166,7 +168,7 @@ function openProject(projectId, trigger) {
   dialog.querySelector(".dialog-close").focus({ preventScroll: true });
 }
 
-if (typeof dialog.showModal === "function") {
+if (typeof dialog?.showModal === "function") {
   document.querySelectorAll("[data-open-project]").forEach((button) => {
     button.hidden = false;
     button.addEventListener("click", (event) => {
@@ -175,20 +177,56 @@ if (typeof dialog.showModal === "function") {
     });
   });
 }
-dialog.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", (event) => {
+dialog?.querySelector(".dialog-close")?.addEventListener("click", () => dialog.close());
+dialog?.addEventListener("click", (event) => {
   if (event.target === dialog) {
     const bounds = dialog.getBoundingClientRect();
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
   }
 });
-dialog.addEventListener("close", () => {
+dialog?.addEventListener("close", () => {
   document.body.classList.remove("modal-open");
   dialogTrigger?.focus({ preventScroll: true });
 });
 
+const certificateDialog = document.querySelector(".certificate-dialog");
+let certificateTrigger = null;
+if (typeof certificateDialog?.showModal === "function") {
+  document.querySelectorAll("[data-certificate]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const card = link.closest(".certificate-card");
+      const title = card.querySelector("h3").textContent;
+      const original = link.getAttribute("href");
+      certificateTrigger = link;
+      certificateDialog.querySelector("#certificate-dialog-title").textContent = title;
+      const image = certificateDialog.querySelector("[data-certificate-full-image]");
+      image.src = original;
+      image.alt = `${title}: original certificate of completion awarded to Fatin Ruhul Shahazad`;
+      certificateDialog.querySelector("[data-certificate-source]").href = card.querySelector("[data-certificate-verify]").href;
+      const download = certificateDialog.querySelector("[data-certificate-download]");
+      download.href = original;
+      download.download = card.querySelector("a[download]").download;
+      certificateDialog.showModal();
+      certificateDialog.scrollTop = 0;
+      document.body.classList.add("modal-open");
+      certificateDialog.querySelector("[data-close-certificate]").focus({ preventScroll: true });
+    });
+  });
+  certificateDialog.querySelector("[data-close-certificate]").addEventListener("click", () => certificateDialog.close());
+  certificateDialog.addEventListener("click", (event) => {
+    if (event.target !== certificateDialog) return;
+    const bounds = certificateDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) certificateDialog.close();
+  });
+  certificateDialog.addEventListener("close", () => {
+    document.body.classList.remove("modal-open");
+    certificateTrigger?.focus({ preventScroll: true });
+  });
+}
+
 const copyButton = document.querySelector(".copy-email");
-if (window.isSecureContext && navigator.clipboard?.writeText) {
+if (copyButton && window.isSecureContext && navigator.clipboard?.writeText) {
   copyButton.hidden = false;
   let copyFeedbackTimeout;
   copyButton.addEventListener("click", async () => {
@@ -206,7 +244,7 @@ if (window.isSecureContext && navigator.clipboard?.writeText) {
 
 document.querySelector("[data-year]").textContent = String(new Date().getFullYear());
 if ("IntersectionObserver" in window) {
-  const sections = document.querySelectorAll("#top, #projects, #skills, #about, #contact");
+  const sections = document.querySelectorAll("#top, #projects, #hackathons, #skills, #about, #contact");
   let observer;
   function observeSections() {
     observer?.disconnect();
@@ -217,7 +255,7 @@ if ("IntersectionObserver" in window) {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         document.querySelectorAll("[data-nav]").forEach((link) => {
-          const active = link.getAttribute("href") === `#${entry.target.id}`;
+          const active = link.dataset.section === entry.target.id || link.getAttribute("href") === `#${entry.target.id}`;
           link.classList.toggle("is-current", active);
           if (active) link.setAttribute("aria-current", "location");
           else link.removeAttribute("aria-current");

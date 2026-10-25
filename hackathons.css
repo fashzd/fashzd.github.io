@@ -1,0 +1,277 @@
+/* Hackathon build log, homepage highlights, and original certificate previews. */
+.source-profile:hover { color: var(--green); }
+.source-profile span { margin-left: 8px; }
+.hackathon-spotlight { padding-bottom: 90px; }
+.hackathon-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 90px;
+}
+.hackathon-intro > div > p {
+  max-width: 475px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.hackathon-stats { display: flex; flex-wrap: wrap; gap: 33px; margin-top: 22px; }
+.hackathon-stats > span {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font: 8px/1.5 var(--mono);
+  letter-spacing: .5px;
+  color: var(--muted);
+}
+.hackathon-stats strong { font: 31px/1 var(--sans); letter-spacing: -1px; color: var(--ink); }
+.hackathon-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 32px; }
+.hackathon-highlight { display: block; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fbfcf7; }
+.hackathon-highlight > img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-bottom: 1px solid var(--line); }
+.hackathon-highlight > div { padding: 21px 22px 23px; }
+.hackathon-highlight .small-label { font-size: 7px; }
+.hackathon-highlight h3 { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; font-size: 22px; line-height: 1.3; letter-spacing: -.7px; }
+.hackathon-highlight h3 span { font-size: 17px; color: var(--green); transition: transform .2s; }
+.hackathon-highlight:hover h3 span { transform: translate(2px,-2px); }
+.hackathon-highlight p { margin-top: 8px; font-size: 11px; line-height: 1.8; color: var(--muted); }
+.hackathon-spotlight-actions { display: flex; align-items: center; gap: 30px; margin-top: 27px; }
+.credential-callout { display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #d4dec7; padding: 16px 19px; margin-top: 25px; border-radius: 6px; background: #eaf0de; }
+.credential-callout .small-label { display: block; font-size: 7px; color: #697c51; }
+.credential-callout strong { display: block; font-size: 14px; font-weight: 500; line-height: 1.6; margin-top: 5px; }
+.credential-callout > span:last-child { font-size: 25px; color: var(--green); }
+.credential-callout:hover { border-color: #a0b77e; }
+
+.archive-hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0 80px; align-items: center; padding-top: 48px; }
+.breadcrumb { display: inline-flex; gap: 10px; font: 8px/1.5 var(--mono); letter-spacing: .7px; color: var(--muted); margin-bottom: 32px; }
+.breadcrumb:hover { color: var(--green); }
+.archive-hero-copy > .eyebrow { font-size: 9px; margin-bottom: 22px; }
+.archive-hero h1 { font-size: clamp(62px, 6.4vw, 90px); letter-spacing: -5px; line-height: 1.01; }
+.archive-hero h1 em { font: italic 400 1.1em/1 var(--serif); letter-spacing: -2.5px; }
+.archive-description { font-size: 15px; line-height: 1.9; color: var(--muted); max-width: 465px; margin-top: 27px; }
+.archive-hero .hero-actions { flex-wrap: wrap; gap: 25px; margin-top: 28px; }
+.certificate-stack { display: block; position: relative; isolation: isolate; height: 390px; border: 1px solid #d9dfcd; border-radius: 14px; background: #e8eddd; overflow: hidden; margin-top: 35px; }
+.stack-orbit { position: absolute; width: 340px; height: 340px; left: calc(50% - 170px); top: 25px; border: 1px dashed #bdc9ab; border-radius: 50%; }
+.certificate-stack > img { position: absolute; width: 175px; height: auto; border: 3px solid #e5e8df; border-radius: 4px; box-shadow: 8px 14px 25px #1e2c1c35; transition: transform .4s; }
+.stack-back { left: calc(50% - 140px); top: 53px; transform: rotate(-13deg); }
+.stack-front { left: calc(50% - 30px); top: 43px; transform: rotate(10deg); }
+.certificate-stack:hover .stack-back { transform: rotate(-17deg) translateX(-4px); }
+.certificate-stack:hover .stack-front { transform: rotate(13deg) translateX(4px); }
+.stack-caption { position: absolute; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 18px; left: 26px; right: 26px; bottom: 26px; border: 1px solid #bdcda0; border-radius: 6px; padding: 15px 20px; background: #e6f1d0f5; box-shadow: 0 5px 12px #17230d12; }
+.stack-caption strong { font: 36px/1 var(--sans); letter-spacing: -1.5px; }
+.stack-caption > span { font: 9px/1.7 var(--mono); letter-spacing: 1px; color: #526641; margin-right: auto; }
+.stack-caption > span:last-child { font: 26px/1 var(--sans); margin-right: 0; }
+.archive-footnote { grid-column: 1/-1; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid var(--line); margin-top: 43px; padding-bottom: 23px; color: var(--muted); font: 8px/1.5 var(--mono); letter-spacing: .8px; }
+.archive-footnote a { display: flex; align-items: center; gap: 25px; }
+.archive-footnote a span { font: 18px var(--sans); color: var(--ink); }
+.hackathon-submissions { padding-block: 78px 85px; }
+.archive-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 50px; margin-bottom: 35px; }
+.archive-section-heading > p { font-size: 13px; line-height: 1.9; color: var(--muted); max-width: 365px; padding-bottom: 5px; }
+.submission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.hackathon-card { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fbfcf7; scroll-margin-top: 120px; }
+.submission-cover { display: block; position: relative; border-bottom: 1px solid var(--line); overflow: hidden; background: #e1e7da; }
+.submission-cover > img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; transition: transform .4s; }
+.submission-cover:hover > img { transform: scale(1.025); }
+.submission-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 27px 30px; }
+.submission-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; font: 8px/1.6 var(--mono); letter-spacing: .4px; color: var(--muted); }
+.submission-meta time { white-space: nowrap; }
+.submission-body h3 { font-size: 32px; line-height: 1.2; letter-spacing: -1px; margin-top: 18px; }
+.submission-event { font-size: 11px; line-height: 1.8; color: var(--green); margin-top: 7px; }
+.submission-event:hover { text-decoration: underline; }
+.submission-event > span { padding-left: 4px; }
+.submission-body > p { font-size: 14px; color: var(--muted); line-height: 1.85; margin-top: 16px; }
+.submission-body .tags { margin-top: 20px; margin-bottom: 24px; }
+.submission-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-top: 1px solid var(--line); padding-top: 17px; width: 100%; margin-top: auto; }
+.submission-actions .text-link { border: 0; }
+.submission-actions .repo-link { font-size: 10px; }
+.certificates-section { padding-block: 58px; border-block: 1px solid #dce1d1; background: #eef1e5; }
+.certificates-section .archive-section-heading > p { max-width: 390px; }
+.certificate-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.certificate-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid #d7ddcc; border-radius: 8px; overflow: hidden; background: #fafbf6; scroll-margin-top: 120px; }
+.certificate-thumbnail { position: relative; display: flex; justify-content: center; align-items: center; height: 288px; padding: 22px; background: #dfe5d5; border-bottom: 1px solid #d7ddcc; }
+.certificate-thumbnail > img { width: auto; height: 100%; max-width: 100%; object-fit: contain; box-shadow: 5px 7px 12px #19251525; transition: transform .3s; }
+.certificate-thumbnail:hover > img { transform: translateY(-3px); }
+.certificate-body { display: flex; flex-direction: column; flex: 1; padding: 21px 23px; }
+.certificate-body > .small-label { font-size: 6px; line-height: 1.7; letter-spacing: .65px; }
+.certificate-body h3 { font-size: 19px; line-height: 1.4; letter-spacing: -.5px; margin-top: 10px; }
+.certificate-issued { font-size: 10px; line-height: 1.8; color: var(--muted); margin-top: 10px; margin-bottom: 19px; }
+.certificate-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--line); padding-top: 12px; margin-top: auto; }
+.certificate-actions .text-link { border: 0; font-size: 10px; gap: 10px; }
+.certificate-actions .repo-link { font-size: 9px; gap: 7px; }
+.certificate-profile-link { display: flex; align-items: center; justify-content: center; gap: 13px; margin-top: 32px; font-size: 11px; color: var(--muted); }
+.certificate-profile-link:hover { color: var(--green); }
+.archive-backlink { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 25px; padding-block: 45px; }
+
+.certificate-dialog { position: fixed; inset: 0; padding: 0; margin: auto; width: min(900px, calc(100% - 48px)); max-height: calc(100dvh - 48px); border: 1px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px #11190f40; overscroll-behavior: contain; }
+.certificate-dialog::backdrop { background: #151c12b3; backdrop-filter: blur(6px); }
+.certificate-dialog-content { padding: 28px 35px 35px; }
+.certificate-dialog-content h2 { font-size: 31px; letter-spacing: -1px; line-height: 1.3; }
+.certificate-dialog-content > p { font-size: 11px; line-height: 1.8; color: var(--muted); margin-top: 9px; }
+.certificate-dialog-content > img { width: 100%; height: auto; max-width: 600px; margin: 24px auto; box-shadow: 0 5px 20px #14200e17; }
+.certificate-dialog-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 23px; border-top: 1px solid var(--line); padding-top: 21px; }
+.certificate-dialog-actions .button { font-size: 11px; }
+
+@media (max-width: 1150px) {
+  .hackathon-intro, .archive-hero { gap: 50px; }
+  .archive-hero h1 { font-size: 74px; }
+  .archive-description { font-size: 14px; }
+  .hackathon-highlight > div { padding: 18px; }
+  .hackathon-highlight h3 { font-size: 19px; }
+  .hackathon-stats { gap: 22px; }
+  .certificate-stack { height: 355px; }
+  .certificate-stack > img { width: 154px; }
+  .stack-back { left: calc(50% - 125px); }
+  .stack-front { left: calc(50% - 20px); }
+  .stack-caption { bottom: 22px; left: 20px; right: 20px; padding: 12px 16px; }
+  .stack-caption > span { font-size: 7px; }
+  .certificate-thumbnail { height: 250px; padding: 18px; }
+  .certificate-body { padding: 20px; }
+  .certificate-body h3 { font-size: 17px; }
+}
+@media (max-width: 920px) {
+  .hackathon-spotlight { padding-bottom: 70px; }
+  .hackathon-intro, .archive-hero { gap: 32px; }
+  .hackathon-intro > div > p { font-size: 12px; }
+  .hackathon-highlights { gap: 16px; }
+  .hackathon-highlight > div { padding: 16px; }
+  .hackathon-highlight h3 { font-size: 16px; }
+  .hackathon-highlight .small-label { font-size: 6px; }
+  .hackathon-highlight p { font-size: 10px; }
+  .hackathon-stats > span { font-size: 6px; gap: 8px; }
+  .hackathon-stats strong { font-size: 27px; }
+  .archive-hero h1 { font-size: 62px; letter-spacing: -3.8px; }
+  .archive-hero-copy > .eyebrow { font-size: 7px; }
+  .archive-description { font-size: 12px; }
+  .archive-hero .hero-actions { gap: 18px; }
+  .archive-hero .button { font-size: 10px; padding: 11px 15px; gap: 23px; }
+  .archive-hero .text-link { font-size: 10px; }
+  .certificate-stack { height: 330px; }
+  .certificate-stack > img { width: 140px; }
+  .stack-back { left: calc(50% - 115px); }
+  .stack-front { left: calc(50% - 20px); }
+  .stack-caption { gap: 10px; left: 17px; right: 17px; bottom: 18px; padding: 11px 14px; }
+  .stack-caption strong { font-size: 31px; }
+  .stack-caption > span { font-size: 6px; }
+  .hackathon-submissions { padding-block: 65px; }
+  .archive-section-heading { gap: 30px; }
+  .archive-section-heading > p { font-size: 11px; max-width: 290px; }
+  .submission-grid { gap: 22px; }
+  .submission-body { padding: 23px; }
+  .submission-body h3 { font-size: 28px; }
+  .submission-body > p { font-size: 12px; }
+  .submission-meta { font-size: 7px; }
+  .submission-event { font-size: 10px; }
+  .submission-actions .repo-link { font-size: 9px; }
+  .certificate-grid { gap: 18px; }
+  .certificate-thumbnail { height: 225px; padding: 17px; }
+  .certificate-body { padding: 18px; }
+  .certificate-body h3 { font-size: 16px; }
+  .certificate-body > .small-label { font-size: 6px; letter-spacing: .3px; }
+  .certificate-actions { gap: 8px; }
+  .certificate-actions .text-link { font-size: 9px; gap: 5px; }
+  .certificate-actions .repo-link { font-size: 8px; gap: 5px; }
+}
+@media (max-width: 700px) {
+  .nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; }
+  .js .nav-links.is-open { display: grid; }
+  .nav-links > a { display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 40px; font-size: 12px; }
+  .nav-links > a > span { vertical-align: baseline; margin-left: auto; }
+  .nav-links > a:not(.nav-contact)::after { left: auto; right: 5px; bottom: 18px; }
+  .nav-links .nav-contact { grid-column: 1/-1; margin-top: 7px; padding: 9px 13px; }
+  .footer > div { flex-wrap: wrap; gap: 15px; }
+  .hackathon-spotlight { padding-bottom: 58px; }
+  .hackathon-spotlight .section-topline { flex-wrap: wrap; gap: 13px; }
+  .source-profile { font-size: 7px; }
+  .hackathon-intro { grid-template-columns: 1fr; gap: 20px; }
+  .hackathon-intro > div > p { font-size: 13px; }
+  .hackathon-stats { gap: 30px; margin-top: 20px; }
+  .hackathon-stats > span { font-size: 8px; gap: 10px; }
+  .hackathon-highlights { grid-template-columns: 1fr; gap: 16px; margin-top: 27px; }
+  .hackathon-highlight { display: grid; grid-template-columns: 105px 1fr; align-items: stretch; }
+  .hackathon-highlight > img { height: 100%; min-height: 117px; object-fit: cover; border-bottom: 0; border-right: 1px solid var(--line); }
+  .hackathon-highlight > div { padding: 17px; }
+  .hackathon-highlight .small-label { font-size: 6px; letter-spacing: .35px; }
+  .hackathon-highlight h3 { font-size: 19px; margin-top: 6px; }
+  .hackathon-highlight p { font-size: 10px; margin-top: 5px; }
+  .hackathon-spotlight-actions { flex-wrap: wrap; gap: 18px 23px; margin-top: 23px; }
+  .hackathon-spotlight-actions .button { font-size: 11px; }
+  .hackathon-spotlight-actions .text-link { font-size: 10px; }
+  .credential-callout { padding: 17px; margin-top: 23px; }
+  .credential-callout strong { font-size: 13px; }
+  .credential-callout .small-label { font-size: 6px; }
+  .archive-hero { grid-template-columns: 1fr; gap: 0; padding-top: 28px; }
+  .breadcrumb { font-size: 7px; margin-bottom: 29px; }
+  .archive-hero-copy > .eyebrow { font-size: 8px; margin-bottom: 20px; }
+  .archive-hero h1 { font-size: clamp(58px, 12vw, 78px); letter-spacing: -3.5px; }
+  .archive-hero h1 em { font-size: 1.08em; letter-spacing: -2px; }
+  .archive-description { font-size: 14px; line-height: 1.85; margin-top: 24px; }
+  .archive-hero .hero-actions { gap: 24px; flex-wrap: nowrap; margin-top: 26px; }
+  .archive-hero .button { font-size: 11px; padding: 13px 16px; gap: 22px; }
+  .archive-hero .text-link { font-size: 10px; gap: 9px; }
+  .certificate-stack { height: 355px; width: 100%; max-width: 450px; justify-self: center; margin-top: 35px; }
+  .certificate-stack > img { width: 155px; }
+  .stack-back { left: calc(50% - 130px); top: 42px; }
+  .stack-front { left: calc(50% - 20px); top: 35px; }
+  .stack-caption { left: 23px; right: 23px; bottom: 22px; padding: 12px 18px; }
+  .stack-caption strong { font-size: 35px; }
+  .stack-caption > span { font-size: 8px; }
+  .archive-footnote { margin-top: 27px; padding-bottom: 20px; font-size: 6px; letter-spacing: .4px; }
+  .archive-footnote a { gap: 13px; }
+  .hackathon-submissions { padding-block: 52px 58px; }
+  .archive-section-heading { display: block; margin-bottom: 26px; }
+  .archive-section-heading > p { font-size: 12px; max-width: 340px; margin-top: 19px; padding: 0; }
+  .submission-grid { grid-template-columns: 1fr; gap: 25px; }
+  .submission-body { padding: 24px; }
+  .submission-body h3 { font-size: 29px; margin-top: 16px; }
+  .submission-body > p { font-size: 13px; margin-top: 14px; }
+  .submission-meta { font-size: 7px; }
+  .submission-event { font-size: 10px; }
+  .submission-actions .text-link { font-size: 11px; }
+  .submission-actions .repo-link { font-size: 9px; }
+  .submission-actions { gap: 10px; }
+  .certificates-section { padding-block: 44px; }
+  .certificates-section .section-aside { font-size: 5px; }
+  .certificate-grid { grid-template-columns: 1fr 1fr; gap: 16px 12px; }
+  .certificate-thumbnail { height: 205px; padding: 15px; }
+  .certificate-thumbnail .expand-icon { width: 25px; height: 25px; right: 9px; bottom: 10px; font-size: 15px; }
+  .certificate-body { padding: 15px 13px; }
+  .certificate-body h3 { font-size: 15px; line-height: 1.4; margin-top: 8px; }
+  .certificate-body > .small-label { font-size: 6px; letter-spacing: .35px; }
+  .certificate-issued { font-size: 9px; line-height: 1.8; margin-top: 9px; margin-bottom: 14px; }
+  .certificate-actions { gap: 2px 9px; padding-top: 6px; }
+  .certificate-actions a { min-height: 36px; }
+  .certificate-actions .text-link { font-size: 9px; gap: 4px; }
+  .certificate-actions .repo-link { font-size: 9px; gap: 4px; }
+  .certificate-profile-link { font-size: 10px; gap: 9px; }
+  .archive-backlink { display: grid; justify-content: start; gap: 17px; padding-block: 32px; }
+  .archive-backlink .text-link { font-size: 10px; }
+  .certificate-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); border-radius: 9px; }
+  .certificate-dialog .dialog-header { padding: 12px 20px; }
+  .certificate-dialog .dialog-header .small-label { font-size: 8px; }
+  .certificate-dialog-content { padding: 22px 20px 26px; }
+  .certificate-dialog-content h2 { font-size: 25px; letter-spacing: -.7px; }
+  .certificate-dialog-content > p { font-size: 10px; }
+  .certificate-dialog-content > img { margin-block: 20px; }
+  .certificate-dialog-actions { flex-direction: column; align-items: flex-start; gap: 17px; padding-top: 19px; }
+  .certificate-dialog-actions .button, .certificate-dialog-actions .text-link { font-size: 10px; }
+}
+@media (max-width: 370px) {
+  .hackathon-highlight { grid-template-columns: 85px 1fr; }
+  .hackathon-highlight > div { padding: 14px; }
+  .hackathon-highlight h3 { font-size: 17px; }
+  .hackathon-stats { gap: 24px; }
+  .archive-hero h1 { font-size: 56px; }
+  .archive-hero .hero-actions { gap: 16px; }
+  .archive-hero .button { font-size: 10px; gap: 15px; padding-inline: 14px; }
+  .archive-hero .text-link { font-size: 9px; }
+  .certificate-stack { height: 330px; }
+  .certificate-stack > img { width: 142px; }
+  .stack-back { left: calc(50% - 119px); }
+  .stack-caption { left: 17px; right: 17px; bottom: 18px; padding: 11px 14px; }
+  .stack-caption > span { font-size: 7px; }
+  .submission-body { padding: 21px; }
+  .submission-meta { font-size: 6px; }
+  .submission-actions .text-link { font-size: 10px; }
+  .submission-actions .repo-link { font-size: 8px; }
+  .certificate-thumbnail { height: 180px; padding: 13px; }
+  .certificate-body h3 { font-size: 14px; }
+  .certificate-body { padding: 14px 11px; }
+}
