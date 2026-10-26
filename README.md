@@ -38,3 +38,5 @@ Publish the root directory of the repository's `main` branch in GitHub Pages set
 DM Sans and Instrument Serif are distributed under the SIL Open Font License. Their license texts are in `assets/fonts/`.
 
 The homepage Courses & Certifications section links to AMD AI Academy and DeepLearning.AI issuer records. Agent Skills with Anthropic is labelled as a course accomplishment, matching the issuer. The AMD records show the completion year; their original PDFs preserve the source date exactly.
+
+Course visuals use the original AMD certificate contents, the issuer-generated DeepLearning.AI certificate image, and the official Agent Skills course thumbnail (credited to its instructor). The DeepLearning.AI takeaways follow the published course outlines. AMD’s detailed syllabus requires a login, so those cards use broad learning-focus descriptions supported by their certificate titles and linked first-party learning resources.
